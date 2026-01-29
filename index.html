@@ -21,23 +21,18 @@
             <h1 class="profile-name">Cahaya Citra ✦</h1>
             
             <div class="bio-container">
-                <p>✨ Open Semua jasa Sayang.<br>
-                <p>- Order Vcs 25.000 Rp per 40 menit<br>
-                <p>
-                - Order Sleep Call (Ngobrol) 15.000 per 30 Menit<br>
-                <p>
-                - Order Sleep Call (Video Call) 20.000 per 30 Menit<br>
-                <p>
-                - Order Video Pribadi Fresh 10.000 per 2 Menit<br>
-                <p>
-                - Order Pap (body) 2.000 per foto<br>
-                 <p>
-                - Order Pap (body+face) 4.000 per foto<br>
-                 <p>- Order BO khusus lokasi Bandung 350.000 Sekali Main<br>
-                 <p>- Order Pijat ++ khusus lokasi Bandung 200.000 <br>
-                    
-                
-                Stay tuned for daily exclusive updates! 🎀</p>
+                <p>✨ Open Semua jasa Sayang.</p>
+                <ul class="price-list">
+                    <li>Order Vcs: 25k / 40 mnt</li>
+                    <li>Sleep Call (Voice): 15k / 30 mnt</li>
+                    <li>Sleep Call (VC): 20k / 30 mnt</li>
+                    <li>Video Pribadi: 10k / 2 mnt</li>
+                    <li>Pap Body: 2k / foto</li>
+                    <li>Pap Full: 4k / foto</li>
+                    <li>BO Bandung: 350k (1x Play)</li>
+                    <li>Pijat ++ Bandung: 200k</li>
+                </ul>
+                <p style="margin-top: 10px;">Stay tuned for daily updates! 🎀</p>
             </div>
 
             <div class="profile-stats">
@@ -63,22 +58,30 @@
                 <div class="views-info">👁 980</div>
             </div>
             <div class="grid-item video-item zoom-pulse" style="animation-delay: 0.4s;" onclick="openLightbox(this)">
-                <video autoplay muted loop playsinline><source src="video 1 citra.mp4" type="video/mp4"></video>
+                <video autoplay muted loop playsinline>
+                    <source src="video 1 citra.mp4" type="video/mp4">
+                </video>
                 <div class="media-badge">Video</div>
                 <div class="views-info">👁 3100</div>
             </div>
             <div class="grid-item video-item zoom-pulse" style="animation-delay: 0.6s;" onclick="openLightbox(this)">
-                <video autoplay muted loop playsinline><source src="VIDEO 2 CITRA.mp4" type="video/mp4"></video>
+                <video autoplay muted loop playsinline>
+                    <source src="VIDEO 2 CITRA.mp4" type="video/mp4">
+                </video>
                 <div class="media-badge">Video</div>
                 <div class="views-info">👁 2153</div>
             </div>
             <div class="grid-item video-item zoom-pulse" style="animation-delay: 0.8s;" onclick="openLightbox(this)">
-                <video autoplay muted loop playsinline><source src="VIDEO 3 CITRA.mp4" type="video/mp4"></video>
+                <video autoplay muted loop playsinline>
+                    <source src="VIDEO 3 CITRA.mp4" type="video/mp4">
+                </video>
                 <div class="media-badge">Video</div>
                 <div class="views-info">👁 1804</div>
             </div>
             <div class="grid-item video-item zoom-pulse" style="animation-delay: 1s;" onclick="openLightbox(this)">
-                <video autoplay muted loop playsinline><source src="VIDEO 4 CITRA.mp4" type="video/mp4"></video>
+                <video autoplay muted loop playsinline>
+                    <source src="VIDEO 4 CITRA.mp4" type="video/mp4">
+                </video>
                 <div class="media-badge">Video</div>
                 <div class="views-info">👁 2447</div>
             </div>
@@ -98,11 +101,12 @@
     </div>
 
     <div id="lightbox" class="lightbox" onclick="closeLightbox()">
-        <div class="tiktok-frame">
+        <div class="tiktok-frame" onclick="event.stopPropagation()">
             <div id="lightbox-container"></div>
             <div class="video-overlay-info">
                 <span id="modal-views">👁 0</span>
             </div>
+            <button class="close-btn" onclick="closeLightbox()">✕</button>
         </div>
     </div>
 
