@@ -1,0 +1,108 @@
+:root {
+    --accent: #ff75c3;
+    --bg-dark: #09090b;
+    --tele: #24A1DE;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+    background-color: var(--bg-dark);
+    font-family: 'Outfit', sans-serif;
+    color: white;
+    display: flex;
+    justify-content: center;
+    overflow-x: hidden;
+}
+
+.bg-glow {
+    position: fixed; inset: 0; z-index: -1;
+    background: radial-gradient(circle at top right, #3b0764, transparent),
+                radial-gradient(circle at bottom left, #4c0519, transparent);
+    opacity: 0.5;
+}
+
+.app-wrapper { width: 100%; max-width: 450px; padding: 20px 10px; min-height: 100vh; }
+
+/* Profile & Avatar */
+.profile-section { text-align: center; margin-bottom: 30px; }
+.avatar-container { display: flex; justify-content: center; margin-bottom: 12px; }
+.avatar-ring {
+    width: 90px; height: 90px; padding: 3px; border-radius: 50%;
+    background: linear-gradient(45deg, var(--accent), #ffa647);
+    animation: profilePulse 3s infinite ease-in-out;
+}
+.avatar-ring img { width: 100%; height: 100%; border-radius: 50%; object-fit: cover; }
+
+@keyframes profilePulse {
+    0%, 100% { transform: scale(1); box-shadow: 0 0 0 rgba(255,117,195,0); }
+    50% { transform: scale(1.05); box-shadow: 0 0 20px rgba(255,117,195,0.3); }
+}
+
+.profile-name { font-size: 1.6rem; font-weight: 700; margin-bottom: 15px; }
+
+/* Bio Shape */
+.bio-container {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    padding: 15px;
+    margin: 0 auto 20px;
+    width: 90%;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    color: #cbd5e1;
+}
+
+.profile-stats { display: flex; justify-content: center; margin-bottom: 15px; }
+.stat-value { font-size: 1.2rem; font-weight: 700; display: block; }
+.stat-label { font-size: 0.75rem; color: #94a3b8; text-transform: uppercase; }
+
+.tele-button {
+    display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+    background: var(--tele); color: white; text-decoration: none;
+    padding: 12px 24px; border-radius: 50px; font-weight: 700;
+    margin-bottom: 15px; transition: 0.3s; box-shadow: 0 4px 15px rgba(36, 161, 222, 0.3);
+}
+.tele-button img { width: 20px; }
+
+/* Grid & Zoom Animation */
+.gallery-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; }
+.grid-item { position: relative; aspect-ratio: 1; border-radius: 8px; overflow: hidden; background: #18181b; cursor: pointer; }
+.grid-item img, .grid-item video { width: 100%; height: 100%; object-fit: cover; }
+
+.zoom-pulse { animation: zoomInOut 4s infinite ease-in-out; }
+@keyframes zoomInOut {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(0.94); }
+}
+
+.grid-item:hover { animation-play-state: paused; z-index: 5; }
+.grid-item:hover img, .grid-item:hover video { transform: scale(1.1); transition: 0.3s; }
+
+.views-info { position: absolute; bottom: 5px; left: 8px; font-size: 10px; text-shadow: 0 1px 4px black; z-index: 2; }
+.media-badge { position: absolute; top: 6px; right: 6px; background: rgba(0,0,0,0.6); padding: 2px 6px; border-radius: 4px; font-size: 8px; z-index: 2; }
+
+/* QRIS - Tegak & Sempurna */
+.donate-section { margin-top: 40px; padding-bottom: 60px; width: 100%; }
+.donate-card {
+    background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 24px; padding: 30px 20px; text-align: center;
+}
+.qris-wrapper { display: flex; justify-content: center; width: 100%; margin-top: 15px; }
+.qris-box {
+    background: white; padding: 15px; border-radius: 16px;
+    display: block; width: fit-content; line-height: 0;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.4);
+}
+.qris-box img {
+    width: 200px; height: 200px;
+    display: block; transform: none !important;
+}
+
+/* Lightbox */
+.lightbox { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.98); z-index: 9999; align-items: center; justify-content: center; }
+.tiktok-frame { position: relative; width: 92%; max-width: 400px; aspect-ratio: 9/16; background: #000; border-radius: 20px; overflow: hidden; }
+#lightbox-container { width: 100%; height: 100%; }
+#lightbox-container img, #lightbox-container video { width: 100%; height: 100%; object-fit: cover; }
+.video-overlay-info { position: absolute; bottom: 40px; left: 20px; font-weight: 700; }
