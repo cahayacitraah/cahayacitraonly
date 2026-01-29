@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cahaya Citra Inside</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="bg-glow"></div>
+
+    <div class="app-wrapper">
+        <header class="profile-section">
+            <div class="avatar-container">
+                <div class="avatar-ring">
+                    <img src="PROFIL CITRA.jpg" alt="Profile">
+                </div>
+            </div>
+            
+            <h1 class="profile-name">Cahaya Citra ✦</h1>
+            
+            <div class="bio-container">
+                <p>✨ Open Semua jasa Sayang.<br>
+                <p>- Order Vcs 25.000 Rp per 40 menit<br>
+                <p>
+                - Order Sleep Call (Ngobrol) 15.000 per 30 Menit<br>
+                <p>
+                - Order Sleep Call (Video Call) 20.000 per 30 Menit<br>
+                <p>
+                - Order Video Pribadi Fresh 10.000 per 2 Menit<br>
+                <p>
+                - Order Pap (body) 2.000 per foto<br>
+                 <p>
+                - Order Pap (body+face) 4.000 per foto<br>
+                 <p>- Order BO khusus lokasi Bandung 350.000 Sekali Main<br>
+                 <p>- Order Pijat ++ khusus lokasi Bandung 200.000 <br>
+                    
+                
+                Stay tuned for daily exclusive updates! 🎀</p>
+            </div>
+
+            <div class="profile-stats">
+                <div class="stat-item">
+                    <span class="stat-value">8320</span>
+                    <span class="stat-label">Total Views</span>
+                </div>
+            </div>
+
+            <a href="https://t.me/Citraniaa" target="_blank" class="tele-button">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg" alt="Tele">
+                Chat My Telegram
+            </a>
+        </header>
+
+        <main class="gallery-grid">
+            <div class="grid-item zoom-pulse" style="animation-delay: 0s;" onclick="openLightbox(this)">
+                <img src="foto 1.jpg" alt="1">
+                <div class="views-info">👁 1520</div>
+            </div>
+            <div class="grid-item zoom-pulse" style="animation-delay: 0.2s;" onclick="openLightbox(this)">
+                <img src="foto 2.jpg" alt="2">
+                <div class="views-info">👁 980</div>
+            </div>
+            <div class="grid-item video-item zoom-pulse" style="animation-delay: 0.4s;" onclick="openLightbox(this)">
+                <video autoplay muted loop playsinline><source src="video 1 citra.mp4" type="video/mp4"></video>
+                <div class="media-badge">Video</div>
+                <div class="views-info">👁 3100</div>
+            </div>
+            <div class="grid-item video-item zoom-pulse" style="animation-delay: 0.6s;" onclick="openLightbox(this)">
+                <video autoplay muted loop playsinline><source src="VIDEO 2 CITRA.mp4" type="video/mp4"></video>
+                <div class="media-badge">Video</div>
+                <div class="views-info">👁 2153</div>
+            </div>
+            <div class="grid-item video-item zoom-pulse" style="animation-delay: 0.8s;" onclick="openLightbox(this)">
+                <video autoplay muted loop playsinline><source src="VIDEO 3 CITRA.mp4" type="video/mp4"></video>
+                <div class="media-badge">Video</div>
+                <div class="views-info">👁 1804</div>
+            </div>
+            <div class="grid-item video-item zoom-pulse" style="animation-delay: 1s;" onclick="openLightbox(this)">
+                <video autoplay muted loop playsinline><source src="VIDEO 4 CITRA.mp4" type="video/mp4"></video>
+                <div class="media-badge">Video</div>
+                <div class="views-info">👁 2447</div>
+            </div>
+        </main>
+
+        <section class="donate-section">
+            <div class="donate-card">
+                <h3>Support My Work 🎀</h3>
+                <p>Scan to donate via QRIS</p>
+                <div class="qris-wrapper">
+                    <div class="qris-box">
+                        <img src="Qris CC.jpg" alt="QRIS">
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+        <div class="tiktok-frame">
+            <div id="lightbox-container"></div>
+            <div class="video-overlay-info">
+                <span id="modal-views">👁 0</span>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
